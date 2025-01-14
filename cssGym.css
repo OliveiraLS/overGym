@@ -2,7 +2,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 14px;
     background: var(--cinzaBase);
-    padding: 0.5rem;
+    margin: 0;
     background-image:url(/imagens/texturaBackground.we)
 }
 
@@ -16,6 +16,8 @@ p {
     --preto: #000000;
     --cinzaBase: #505050;
     --azulBase2: #0099ff;
+    --brancoLogin: #fffff0;
+    --azulLogin: #89bcff;
 }
 
 /* Menu principal barra */
@@ -69,6 +71,7 @@ p {
     transition: 0.4s;
 }
 
+/* ---------------------------- Index -----------------------*/
 
 /* imagens Index */
 
@@ -121,7 +124,7 @@ p {
     animation-fill-mode: forwards;
 }
 
-/*section */
+/*section Index*/
 
 section {
     display: flex;
@@ -211,4 +214,170 @@ footer {
     padding: 0.5rem 0rem;
     justify-content: center;
     width: 100%;
+}
+
+/*  ------------------- LOGIN -------------------------- */
+
+.sectionColor{
+    background: var(--preto);
+}
+
+.containerLogin{
+    margin: auto;
+    display: flex;
+    width: 80%;
+    height: 100vh;
+}
+
+.imgLogin{
+    width: 70%;
+    background: url(/imagens/loginBackgroud.png);
+    background-size:cover;
+}
+
+.imgLogin2{
+    width: 30%;
+    padding-top: 2rem;
+}
+
+@keyframes loginAnimation {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.border1{
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border: 4px solid #e9e9e9;
+    border-top-color: #004db3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    animation: loginAnimation 20s forwards linear infinite;
+}
+
+@keyframes loginAnimation2 {
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+ .border2 {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    margin: auto;
+    border: 4px solid #e9e9e9;
+    border-top-color: #004db3;
+    animation: loginAnimation2 10s reverse linear infinite;
+ }
+
+ .border2 :last-child{
+    animation: logoStop infinite linear infinite;
+ }
+
+ 
+.logoLogin{
+    background-image: url(/imagens/logo_semborda.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+  
+}
+
+.formAll{
+    margin-top: 2rem;
+    color:var(--brancoLogin);
+    background: transparent;   
+}
+
+.formTittle h2{
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputFormat{
+    padding: 1rem;
+    margin: auto 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputFormat label{
+    color: var(--azulLogin);
+}
+
+.inputFormat input{
+    margin:auto;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 0.9rem;
+    width: 70%;
+    background: transparent;
+    border: 2px solid #181818;
+    transition: 0.6s;
+    color: var(--brancoLogin);
+}
+
+.inputFormat input:hover{
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 0.9rem;
+    width: 80%;
+    background: transparent;
+    border: 2px solid #ebebeb;
+
+    
+}
+
+.inputSubmit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.8rem 0;
+}
+
+.inputSubmit input{
+    border: 1px solid var(--brancoLogin);
+    background-color: var(--azulBase);
+    color: var(--brancoLogin);
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.inputSubmit input:hover {
+    background-color: var(--azulBase2);
+    cursor: pointer;
+
+}
+
+.inputFormat3 p{
+    color: var(--azulLogin);
+    font-size: 0.7rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputFormat3 a:link{
+    text-decoration: none;
+    color: var(--azulLogin);
+}
+
+.inputFormat3 a:visited{
+    color: var(--azulLogin);
+}
+
+.inputFormat3 a p:hover{
+    color: var(--azulBase);
 }
